@@ -78,6 +78,20 @@ class SLL{
 		}
 		return index;
 	}
+	int BetterReturnKFromLast(int k){
+		Node temp1 = this.head, temp2 = this.head;
+		for(int i=0;i<k;i++){
+			if(temp1 == null){
+				return -1;//Out of bounds
+			}
+			temp1 = temp1.next;
+		}
+		while(temp1!=null){
+			temp1 = temp1.next;
+			temp2 = temp2.next;
+		}
+		return temp2.data;
+	}
 }
 
 /* Name of the class has to be "Main" only if the class is public. */
@@ -95,8 +109,9 @@ public class KFromLast
 		ll.print();
 		System.out.println();
 		int[] result = new int[1];
-		ll.ReturnKthFromLast(ll.head, 2, result);
-		System.out.println(result[0]);
+		//ll.ReturnKthFromLast(ll.head, 2, result);
+		System.out.println(ll.BetterReturnKFromLast(2));
+		//System.out.println(result[0]);
 		//ll.DeleteDupsWithoutBuffer();
 		//ll.DeleteDups();
 		//ll.print();
