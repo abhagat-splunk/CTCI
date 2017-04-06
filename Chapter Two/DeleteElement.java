@@ -1,23 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @xynazog
- Sign out
- Unwatch 1
-  Star 0
- Fork 0 xynazog/CTCI
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs  Settings
-Branch: ChapterTwo Find file Copy pathCTCI/Chapter Two/KFromLast.java
-c8dde2b  7 minutes ago
-@xynazog xynazog Update KFromLast.java
-1 contributor
-RawBlameHistory     
-122 lines (115 sloc)  2.16 KB
-/* package whatever; // don't place package name! */
-
 import java.util.*;
 import java.lang.*;
 import java.io.*;
@@ -110,9 +90,7 @@ class SLL{
 		}
 		return temp2.data;
 	}
-}
-
-boolean DeleteNode(Node n){
+	boolean DeleteNode(Node n){
 		if(n==null||n.next==null){
 			return false;
 		}
@@ -121,12 +99,14 @@ boolean DeleteNode(Node n){
 		n.next = next.next;
 		return true;
 }
+}
+
+
 
 
 
 /* Name of the class has to be "Main" only if the class is public. */
-public class KFromLast
-{
+public class DeleteElement{
 	public static void main (String[] args) throws java.lang.Exception
 	{
 		// your code goes here
@@ -140,11 +120,11 @@ public class KFromLast
 		System.out.println();
 		int[] result = new int[1];
 		//ll.ReturnKthFromLast(ll.head, 2, result);
-		System.out.println(ll.BetterReturnKFromLast(2));
+		System.out.println(ll.DeleteNode(ll.head.next.next));
 		//System.out.println(result[0]);
 		//ll.DeleteDupsWithoutBuffer();
 		//ll.DeleteDups();
-		//ll.print();
+		ll.print();
 		
 		
 	}
