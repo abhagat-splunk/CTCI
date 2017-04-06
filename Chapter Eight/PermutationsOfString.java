@@ -27,12 +27,36 @@ public class PermutationsOfString{
 		return start+c+end;
 	}
 
+
+	public static ArrayList<String> getPerms(String str){
+		int len = str.length();
+		ArrayList<String> result = new ArrayList<String>();
+
+		if(len==0){
+			result.add("");
+			return result;
+		}
+		for(int i=0;i<len;i++){
+			String before = str.substring(0,i);
+			String after = str.substring(i+1,len);
+			ArrayList<String> partials = getPerms(before+after);
+			for(String s: partials){
+				result.add(str.charAt(i)+s);
+			}
+		}
+		return result;
+	}	
+
 	public static void main(String args[]){
 		String str = "ankit";
 		ArrayList<String> arr = getPermutations(str);
 		System.out.println(arr.size());
+		// for(int i=0;i<arr.size();i++){
+		// 	System.out.println(arr.get(i));
+		// }
+		ArrayList<String> arrTwo = getPerms(str);
 		for(int i=0;i<arr.size();i++){
-			System.out.println(arr.get(i));
+			System.out.println(arrTwo.get(i));
 		}
 	}
 }
