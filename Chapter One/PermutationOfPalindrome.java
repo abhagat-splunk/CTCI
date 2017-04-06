@@ -37,6 +37,8 @@ public class PermutationOfPalindrome{
 		}
 		return -1;
 	}
+
+
 	public static void main(String args[]){
 		String x = "abcba";
 		System.out.println(isPermutation(x));
