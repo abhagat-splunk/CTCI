@@ -3,7 +3,7 @@ public class TripleStep{
 	public static int countSteps(int n){
 		int[] memory = new int[n+1];
 		Arrays.fill(memory,-1);
-		return countWays(n,memory);
+		return countWays(n,memory)
 	}
 
 	public static int countWays(int n, int[] memory){
