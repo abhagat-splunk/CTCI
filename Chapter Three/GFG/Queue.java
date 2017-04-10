@@ -60,7 +60,7 @@ class Queue{
 		Queue q = new Queue(100);
 		q.enqueue(4);
 		q.enqueue(5);
-		q.printQueue();
+		q.printQueue(); 
 		System.out.println(q.dequeue());
 		q.dequeue();
 		q.dequeue();
